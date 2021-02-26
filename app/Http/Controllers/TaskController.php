@@ -101,5 +101,13 @@ class TaskController extends Controller
 
         return redirect()->route('tareas.index');
     }
+    public function completa(Request $request, $id)
+    {
+        $tarea = Task::find($id);
 
+        $tarea->state = 'Finalizado';
+
+        $tarea->save();
+        return redirect()->back();
+    }
 }   

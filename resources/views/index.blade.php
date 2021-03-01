@@ -98,7 +98,10 @@
                             <td>
                                 <button type="button" class="btn btn-outline-light" data-bs-toggle="modal" data-bs-target="#editarTarea_{{ $tarea->id }}">
   Editar Tarea
-</button>                       
+</button>                       <form action="{{ route('completar.tarea', $tarea->id)}}" method="POST">
+                                    {{ csrf_field() }}
+                                    <button class="btn btn-outline-success mt-4" type="submit">Finalizada</button>
+                                </form>
                             </td>
                         </tr>
                         <!-- Modal -->

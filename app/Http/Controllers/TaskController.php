@@ -94,19 +94,17 @@ class TaskController extends Controller
     }
 
     public function destroy($id)
-    {
+    { 
         $tarea = Task::find($id);
 
         $tarea->delete();
 
         return redirect()->route('tareas.index');
     }
-    public function completa(Request $request, $id)
+    public function completa($id)
     {
         $tarea = Task::find($id);
-
         $tarea->state = 'Finalizado';
-
         $tarea->save();
         return redirect()->back();
     }

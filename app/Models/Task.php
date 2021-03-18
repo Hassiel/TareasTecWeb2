@@ -12,4 +12,9 @@ class Task extends Model
     protected $fillable = [
         'name','description','due_date', 'area', 'state', 'note'
     ];
+
+    public function proyect()
+    {
+        return $this->belongsTo(Proyect::class, 'proyect_id', 'id');
+    }
 }

@@ -12,4 +12,9 @@ class Proyect extends Model
     protected $fillable = [
         'name','description','final_date', 'hex'
     ];
+
+    public function tasks()
+    {
+		return $this->hasMany('App\Models\Task');	
+    }
 }

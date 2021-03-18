@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Task;
+use App\Models\Proyect;
 use Illuminate\Http\Request;
 
 class TaskController extends Controller
@@ -16,8 +17,11 @@ class TaskController extends Controller
     {
         //Colleción de Tareas
         $tareas = Task::all();
+        $proyectos = Proyect::all();
 
-        return view('index') ->with('tareas', $tareas);
+        return view('index') 
+        ->with('tareas', $tareas)
+        ->with('proyectos', $proyectos);
     }
 
     public function create()
@@ -35,6 +39,7 @@ class TaskController extends Controller
             'area' => $request->area,
             'state' => 'En proceso',
             'note' => $request->note,
+            'proyect_id' => $request->proyect_id,
         ]);
 
         //MODO N00B
@@ -87,6 +92,7 @@ class TaskController extends Controller
             'area' => $request->area,
             'state' => $request->state,
             'note' => $request->note,
+            'proyect_id' => $request->proyect_id,
         ]);
         //REGRESO A LA PÁGINA ANTERIOR DEL DETALLE DE TAREA
         //return redirect()->route('tareas.show', $tarea->id);

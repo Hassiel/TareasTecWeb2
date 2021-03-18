@@ -52,6 +52,14 @@
                     <option value="Branding">Branding</option>
                 </select>
             </div>
+            <div class="form-group mb-3">
+                <label for="">Proyectos</label>
+                <select class="form-control mb-3" name="proyect_id">
+                    @foreach ($proyectos as $proyecto)
+                        <option value="{{ $proyecto->id }}">{{ $proyecto->name }}</option>
+                    @endforeach
+                </select>
+            </div>
             </div>
             <div class="modal-footer">
                 <button type="button" class="btn btn-outline-danger" data-bs-dismiss="modal">Cerrar</button>

@@ -7,11 +7,7 @@ use Illuminate\Http\Request;
 
 class ProyectController extends Controller
 {
-    /**
-     * Display a listing of the resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
+
     public function index()
     {
         ///Colleción de Tareas

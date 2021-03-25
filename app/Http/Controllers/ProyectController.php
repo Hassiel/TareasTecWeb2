@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use Auth;
 use App\Models\Proyect;
 use Illuminate\Http\Request;
 
@@ -11,7 +12,7 @@ class ProyectController extends Controller
     public function index()
     {
         ///Colleción de Tareas
-        $proyectos = Proyect::all();
+        $proyectos = Proyect::where('user_id', Auth::user()->id)->orderBy('created_at', 'desc')->get();
 
         return view('proyects.index') ->with('proyectos', $proyectos);
     }
@@ -25,6 +26,7 @@ class ProyectController extends Controller
     {
         //MODO PRO
         $proyecto = Proyect::create([
+            'user_id' => Auth::user()->id,
            'name' => $request->name,
            'description' => $request->description,
            'final_date' => $request->final_date,

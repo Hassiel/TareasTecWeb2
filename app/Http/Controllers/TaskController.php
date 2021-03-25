@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Task;
+use Auth;
 use App\Models\Proyect;
 use Illuminate\Http\Request;
 
@@ -11,23 +12,24 @@ class TaskController extends Controller
     public function index()
     {
         //Colleción de Tareas
-        $tareas = Task::all();
-        $proyectos = Proyect::all();
+        $tareas = Task::where('user_id', Auth::user()->id)->get();;
+        $proyectos = Proyect::where('user_id', Auth::user()->id)->get();;
 
-        return view('index') 
+        return view('task.index') 
         ->with('tareas', $tareas)
         ->with('proyectos', $proyectos);
     }
 
     public function create()
     {
-        return view('create');
+        return view('task.create');
     }
 
     public function store(Request $request)
     {
         //MODO PRO
         $tarea = Task::create([
+            'user_id' => Auth::user()->id,
            'name' => $request->name,
            'description' => $request->description,
            'due_date' => $request->due_date,
@@ -54,14 +56,19 @@ class TaskController extends Controller
 
     public function show( $id)
     {
-        $tarea = Task::find($id);
-        return view('show')->with('tarea', $tarea);
+        $tarea = Task::where('id', $id)->where('user_id', Auth::user()->id)->first();
+
+        if (empty($tarea)) {
+            return redirect()->back();
+        }else{
+            return view('tasks.show')->with('tarea', $tarea);
+        }
     }
 
     public function edit( $id)
     {
         $tarea = Task::find($id);
-        return view('edit')->with('tarea', $tarea);
+        return view('task.edit')->with('tarea', $tarea);
     }
 
     public function update(Request $request, $id)
@@ -91,7 +98,7 @@ class TaskController extends Controller
         ]);
         //REGRESO A LA PÁGINA ANTERIOR DEL DETALLE DE TAREA
         //return redirect()->route('tareas.show', $tarea->id);
-        if ($request->origen == 'edit') {
+        if ($request->origen == 'task.edit') {
             redirect()->route('tareas.show', $tarea->id);
         }else{
            return redirect()->back();

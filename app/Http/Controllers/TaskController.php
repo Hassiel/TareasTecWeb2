@@ -91,7 +91,11 @@ class TaskController extends Controller
         ]);
         //REGRESO A LA PÁGINA ANTERIOR DEL DETALLE DE TAREA
         //return redirect()->route('tareas.show', $tarea->id);
-        return redirect()->back();
+        if ($request->origen == 'edit') {
+            redirect()->route('tareas.show', $tarea->id);
+        }else{
+           return redirect()->back();
+        }
     }
 
     public function destroy($id)

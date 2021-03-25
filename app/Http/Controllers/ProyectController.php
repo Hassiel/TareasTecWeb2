@@ -34,19 +34,19 @@ class ProyectController extends Controller
         return redirect()->back();
     }
 
-    public function show(Proyect $proyect)
+    public function show($id)
     {
         $proyecto = Proyect::find($id);
         return view('show')->with('proyecto', $proyecto);
     }
 
-    public function edit(Proyect $proyect)
+    public function edit($id)
     {
         $proyecto = Proyect::find($id);
         return view('proyects.edit')->with('proyectos', $proyecto);
     }
 
-    public function update(Request $request, Proyect $proyect)
+    public function update(Request $request, $id)
     {
         //MODO PRO
         $proyecto = Proyect::find($id);
@@ -66,7 +66,7 @@ class ProyectController extends Controller
             }
     }
 
-    public function destroy(Proyect $proyect)
+    public function destroy($id)
     {
         $proyecto = Proyect::find($id);
 

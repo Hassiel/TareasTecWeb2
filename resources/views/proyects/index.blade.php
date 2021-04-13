@@ -1,17 +1,16 @@
-@extends('layouts.master')
+@extends('layouts.master2')
 
 @section('content')
-<div class="container-fluid mb-4" >
+      <div class="container mb-4" >
     <div class="row align-items-center">
         <div class="col-md-8">
             <div class="title-page px-4 py-5">
-                <h3 class="display-1">Noé Hassiel</h3>
-                <p class="lead">Notion 2.0 N00B</p>
+                <h3 class="display-1">{{ Auth::user()->name }}</h3>
             </div>
         </div>
         <div class="col-md-4">
             <!-- Button trigger modal -->
-            <button type="button" class="btn btn-outline-dark" data-bs-toggle="modal" data-bs-target="#exampleModal">
+            <button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#exampleModal">
             Crear nuevo proyecto
             </button>
         </div>
@@ -87,7 +86,7 @@
                                             @endforeach
                                         </ul>
                                     </div>
-                                    <a type="button" class="btn btn-outline-dark" data-bs-toggle="modal" data-bs-target="#agregarTarea_{{ $proyecto->id }}">
+                                    <a type="button" class="btn btn-outline-dark cta bg" data-bs-toggle="modal" data-bs-target="#agregarTarea_{{ $proyecto->id }}">
                                         AGREGAR TAREA</a>
                                 </div>
                                 <!-- Modal -->
@@ -145,5 +144,6 @@
                         @endforeach
                         </div>
 </div>                        
-                
+      
+          
 @endsection

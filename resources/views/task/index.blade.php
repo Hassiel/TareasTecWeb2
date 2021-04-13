@@ -1,17 +1,17 @@
-@extends('layouts.master')
+@extends('layouts.master2')
 
 @section('content')
+
 <div class="container-fluid mb-4" >
     <div class="row align-items-center">
         <div class="col-md-8">
             <div class="title-page px-4 py-5">
-                <h3 class="display-1">Noé Hassiel</h3>
-                <p class="lead">Notion 2.0 N00B</p>
+                <h3 class="display-1">{{ Auth::user()->name }}</h3>
             </div>
         </div>
         <div class="col-md-4">
             <!-- Button trigger modal -->
-            <button type="button" class="btn btn-outline-dark" data-bs-toggle="modal" data-bs-target="#exampleModal">
+            <button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#exampleModal">
             Crear nueva tarea
             </button>
         </div>
@@ -104,11 +104,11 @@
                                 @endif  
                             </td>
                             <td>
-                                <button type="button" class="btn btn-outline-light" data-bs-toggle="modal" data-bs-target="#editarTarea_{{ $tarea->id }}">
+                                <button type="button" class="btn btn-outline-light cta bg" data-bs-toggle="modal" data-bs-target="#editarTarea_{{ $tarea->id }}">
   Editar Tarea
 </button>                       <form action="{{ route('completar.tarea', $tarea->id)}}" method="POST">
                                     {{ csrf_field() }}
-                                    <button class="btn btn-outline-success mt-4" type="submit">Finalizada</button>
+                                    <button class="btn btn-outline-success mt-4 cta bg" type="submit">Finalizada</button>
                                 </form>
                             </td>
                         </tr>

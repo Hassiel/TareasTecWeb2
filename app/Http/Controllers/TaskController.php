@@ -61,7 +61,7 @@ class TaskController extends Controller
         if (empty($tarea)) {
             return redirect()->back();
         }else{
-            return view('tasks.show')->with('tarea', $tarea);
+            return view('task.show')->with('tarea', $tarea);
         }
     }
 

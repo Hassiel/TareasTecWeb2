@@ -51,7 +51,7 @@ height: 100%;"  loop  autoplay></lottie-player>
   <div class="container-fluid" style="margin-bottom: 20vh; margin-top:20vh">
     <div class="row align-items-center position-relative">
       <div class="col-md-12" style="color:white; z-index:1;">
-        <h4 class="text-center" style="font-size:7.29167vw;font-weight:400;">WUOW SO COOL¡ I WANT</h4>
+        <h4 class="text-center" style="font-size:7.29167vw;font-weight:400;">WUOW <wbr> COOL¡<wbr>I WANT</h4>
       </div>
       <div class="col-mb-6 align-content-center"style="
         position:absolute;

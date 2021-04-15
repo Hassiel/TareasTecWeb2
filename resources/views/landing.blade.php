@@ -20,7 +20,7 @@
         justify-content: center;">
     <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
     <lottie-player src="https://assets6.lottiefiles.com/datafiles/Kh0wQtxR5uZr7vf/data.json"  background="transparent"  
-        speed="3.5"  style="display:flex; width: 550px; height: 550px;"loop  autoplay></lottie-player>
+        speed="3.5"  style="display:flex; width: 60vw; height: 60vh;"loop  autoplay></lottie-player>
   </div>
     </div>
   </div>
@@ -48,24 +48,57 @@ height: 100%;"  loop  autoplay></lottie-player>
   </div>      
 </section>
 <section style="background-color:#FF5043; padding:100px 100px">  
-  <div class="container-fluid">
+  <div class="container-fluid" style="margin-bottom: 20vh; margin-top:20vh">
     <div class="row align-items-center position-relative">
+      <div class="col-md-12" style="color:white; z-index:1;">
+        <h4 class="text-center" style="font-size:7.29167vw;font-weight:400;">WUOW SO COOL¡ I WANT</h4>
+      </div>
       <div class="col-mb-6 align-content-center"style="
-        position:relative;
+        position:absolute;
         z-index: 0; 
         display: flex;
         align-items: center; 
         justify-content: center;">
        <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
-<lottie-player src="https://assets4.lottiefiles.com/packages/lf20_27cgfczo.json"  background="transparent"  speed="1"  style="width: 70%; height: 70%;"  loop  autoplay></lottie-player>
+<lottie-player src="https://assets4.lottiefiles.com/packages/lf20_27cgfczo.json"  background="transparent"  speed="1"  style="width: 70vw; height: 70vh;"  loop  autoplay></lottie-player>
       </div>
     </div>
   </div>
 </section>
 <section id="precios" style="height: 100vh; background-color:#FF5043">  
-    
+  <div class="container">
+    <div class="row">
+      <div class="col-md-6 mt-lg-5">
+        <h3 class="text-white mt-5 text-center" style="font-size: 5vw;">Para estudiantes</h3>
+        <p class="text-white mt-5 text-center" style="font-size: 9vw;">0$</p>
+        <a class="btn cta bg mt-5">Conoce más¡ Si no quieres no</a>
+      </div>
+      <div class="col-md-6 mt-lg-5">
+        <h3 class="text-white mt-5 text-center" style="font-size: 5vw;">Para equipos</h3>
+        <p class="text-white mt-5 text-center" style="font-size: 9vw;">10$</p>
+        <a class="btn cta bg mt-5 ">Conoce más¡ Si no quieres no</a>
+      </div>
+    </div>
+  </div>
 </section>
-<section id="desarrollo" style="height: 100vh; background-color:#2D2D2D">
-
+<section id="desarrollo" style="background-color:#2D2D2D">
+  <div class="container" style="padding-top: 11vh">
+    <div class="row justify-content-center">
+      <div class="col-md-8 .offset-2" style="color:white; z-index:1;">
+        <h2 class="text-center mb-3" style="font-size:7.29167vw;">Made by: Noé Hassiel</h2>          
+      </div>
+      <div class="col-md-8 d-inline-flex mt-4">
+        <div href="" class="col-4">
+          <img style="max-width:15vw;" src="{{ asset('img/laravel.svg') }}" alt="">
+        </div>
+        <div href="" class="col-4">
+          <img style="max-width:15vw;" src="{{ asset('img/figma.png') }}" alt="">
+        </div>  
+        <div href="" class="col-4">
+          <img style="max-width:15vw;" src="{{ asset('img/bootstrap.svg') }}" alt="">
+        </div>     
+      </div>
+      </div>
+    </div>
 </section>
 @endsection

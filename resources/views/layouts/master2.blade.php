@@ -16,9 +16,7 @@
     />
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700;800&display=swap" rel="stylesheet">
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cabin:wght@400;500;600;700&display=swap" rel="stylesheet">
     
 
     <!-- BOX ICONS CSS-->
@@ -28,6 +26,30 @@
     />
 
     <style>
+      h1{
+      font-weight: 700;
+      font-family: 'Cabin', sans-serif;
+        }
+      h2{
+        font-weight: 600;
+        font-family: 'Cabin', sans-serif;
+      }
+      h3{
+        font-weight: 600;
+        font-family: 'Cabin', sans-serif;
+      }
+      p{
+          font-weight: 400;
+          font-family: 'Cabin', sans-serif;
+      }
+      a{
+        font-weight: 400;
+        font-family: 'Cabin', sans-serif;
+      }
+      label{
+        font-weight: 400;
+        font-family: 'Cabin', sans-serif;
+      }
         body{
             background-color:#FF5043;
         }
@@ -78,7 +100,7 @@
     <div class="p-1 my-container active-cont">
       <!-- Top Nav -->
       <nav class="navbar top-navbar px-5">
-        <a class="btn border-0" id="menu-btn"><i class="bx bx-menu"></i></a>
+        <a class="btn cta bg border-0" id="menu-btn"><i class="bx bx-menu"></i></a>
       </nav>
       <!--End Top Nav -->
       @yield('content')

@@ -11,11 +11,15 @@
     rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" 
     crossorigin="anonymous">
     <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700;800&display=swap" rel="stylesheet">
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cabin:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    
+    
     <link rel="stylesheet" href="{{ asset('css/custom.css') }}">
     <style>
+      body{
+        background-color:#FF5043;
+      }
         .modal-content{
             background-color: black;
             color: white;
@@ -24,6 +28,30 @@
         .active{
             color: #FF5043;
         }
+        h1{
+      font-weight: 700;
+      font-family: 'Cabin', sans-serif;
+        }
+      h2{
+        font-weight: 600;
+        font-family: 'Cabin', sans-serif;
+      }
+      h3{
+        font-weight: 600;
+        font-family: 'Cabin', sans-serif;
+      }
+      p{
+          font-weight: 400;
+          font-family: 'Cabin', sans-serif;
+      }
+      a{
+        font-weight: 400;
+        font-family: 'Cabin', sans-serif;
+      }
+      label{
+        font-weight: 400;
+        font-family: 'Cabin', sans-serif;
+      }
     </style>
 </head>
 <body>

@@ -12,8 +12,7 @@
     crossorigin="anonymous">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Cabin:wght@400;500;600;700&display=swap" rel="stylesheet">
-    
-    
+    <link rel="stylesheet" href="{{ asset('css/app.css') }}">
     
     <link rel="stylesheet" href="{{ asset('css/custom.css') }}">
     <style>
@@ -54,7 +53,7 @@
       }
     </style>
 </head>
-<body>
+<body data-scroll-container>
     @include('layouts.nav')
     @yield('content')
     <!--JAVA BOOTSTAP!-->
@@ -62,5 +61,14 @@
     integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" 
     crossorigin="anonymous"></script>
     <script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
+    
+    <script src="{{ asset('js/locomotive-scroll.min.js') }}"></script>
+<script>
+    const scroll = new LocomotiveScroll({
+    el: document.querySelector('[data-scroll-container]'),
+    smooth: true
+});
+</script>
+
 </body>
 </html>

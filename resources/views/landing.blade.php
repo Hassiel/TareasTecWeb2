@@ -1,11 +1,11 @@
 @extends('layouts.master')
 
 @section('content')
-<section style="height: 100vh; background-color:#2D2D2D">
-  <div class="container" style="padding-top: 18vh">
+<section data-scroll-section style="height: 100vh; background-color:#2D2D2D">
+  <div data-scroll-speed="1" data-scroll class="container" style="padding-top: 18vh">
     <div class="row justify-content-center">
       <div class="col-md-8 .offset-2" style="color:white; z-index:1;">
-        <h1 class="text-center mb-3" style="font-size:7.29167vw;">Productividad supercargada</h1>
+        <h1 data-scroll class="text-center mb-3" style="font-size:7.29167vw;">Productividad supercargada</h1>
         <p class="text-center mb-5">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fringilla venenatis, 
           ac vitae ut varius massa. Nibh vitae cras nibh ultrices.</p>
           <div class="position-relative">
@@ -25,11 +25,11 @@
     </div>
   </div>
 </section>
-<section id="funcion" style="height: 100vh; background-color:#FF5043; padding: 70px 100px;">
-  <div class="container-fluid mb-4" >
+<section data-scroll-section id="funcion" style="height: 100vh; background-color:#FF5043; padding: 70px 100px;">
+  <div data-scroll-speed="1" data-scroll class="container-fluid mb-4" >
     <div class="row align-items-center">
       <div class="col-md-6 mb-5">
-        <h2 style="font-size: 7.5vw; background-color:white;">
+        <h2 data-scroll style="font-size: 7.5vw; background-color:white;">
           Rápido, Funcional y Seguro
         </h2>
         <p style="font-size: 2.25vw; color: white;">
@@ -47,11 +47,11 @@ height: 100%;"  loop  autoplay></lottie-player>
     </div>
   </div>      
 </section>
-<section style="background-color:#FF5043; padding:100px 100px">  
-  <div class="container-fluid" style="margin-bottom: 20vh; margin-top:20vh">
+<section data-scroll-section style="background-color:#FF5043; padding:100px 100px">  
+  <div data-scroll-speed="2" data-scroll class="container-fluid" style="margin-bottom: 20vh; margin-top:20vh">
     <div class="row align-items-center position-relative">
       <div class="col-md-12" style="color:white; z-index:1;">
-        <h4 class="text-center" style="font-size:7.29167vw;font-weight:400;">WUOW <wbr> COOL¡<wbr>I WANT</h4>
+        <h4 data-scroll class="text-center" style="font-size:7.29167vw;font-weight:500;">WUOW <wbr> COOL¡<wbr>I WANT</h4>
       </div>
       <div class="col-mb-6 align-content-center"style="
         position:absolute;
@@ -60,32 +60,32 @@ height: 100%;"  loop  autoplay></lottie-player>
         align-items: center; 
         justify-content: center;">
        <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
-<lottie-player src="https://assets4.lottiefiles.com/packages/lf20_27cgfczo.json"  background="transparent"  speed="1"  style="width: 70vw; height: 70vh;"  loop  autoplay></lottie-player>
+<lottie-player data-scroll="1" data-scroll-speed="6" src="https://assets4.lottiefiles.com/packages/lf20_27cgfczo.json"  background="transparent"  speed="1"  style="width: 70vw; height: 70vh;"  loop  autoplay></lottie-player>
       </div>
     </div>
   </div>
 </section>
-<section id="precios" style="height: 100vh; background-color:#FF5043">  
-  <div class="container">
+<section data-scroll-section id="precios" style="height: 100vh; background-color:#FF5043">  
+  <div data-scroll-speed="2" data-scroll class="container">
     <div class="row">
       <div class="col-md-6 mt-lg-5">
         <h3 class="text-white mt-5 text-center" style="font-size: 5vw;">Para estudiantes</h3>
         <p class="text-white mt-5 text-center" style="font-size: 9vw;">0$</p>
-        <a href="{{ route('register') }}" class="btn cta bg mt-5">Únete hommie</a>
+        <a data-scroll href="{{ route('register') }}" class="btn cta bg mt-5">Únete hommie</a>
       </div>
       <div class="col-md-6 mt-lg-5">
         <h3 class="text-white mt-5 text-center" style="font-size: 5vw;">Para equipos</h3>
         <p class="text-white mt-5 text-center" style="font-size: 9vw;">10$</p>
-        <a href="{{ route('register') }}" class="btn cta bg mt-5 ">Tienes proyectos chidos?</a>
+        <a data-scroll href="{{ route('register') }}" class="btn cta bg mt-5 ">Tienes proyectos chidos?</a>
       </div>
     </div>
   </div>
 </section>
-<section id="desarrollo" style="background-color:#2D2D2D">
-  <div class="container" style="padding-top: 11vh">
+<section data-scroll-section id="desarrollo" style="background-color:#2D2D2D">
+  <div data-scroll-speed="2" data-scroll class="container" style="padding-top: 11vh">
     <div class="row justify-content-center">
       <div class="col-md-8 .offset-2" style="color:white; z-index:1;">
-        <h2 class="text-center mb-3" style="font-size:7.29167vw;">Made by: Noé Hassiel</h2>          
+        <h2 data-scroll="1" class="text-center mb-3" style="font-size:7.29167vw;">Made by: Noé Hassiel</h2>          
       </div>
       <div class="col-md-8 d-inline-flex mt-4">
         <div href="" class="col-4">
@@ -101,4 +101,5 @@ height: 100%;"  loop  autoplay></lottie-player>
       </div>
     </div>
 </section>
+
 @endsection

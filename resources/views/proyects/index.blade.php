@@ -63,7 +63,6 @@
                 <h5 class="card-header">Listado de proyectos</h5>
                     <div class="card-body">
                         <h5 class="card-title">Proyectos en curso</h5>
-                        <p class="card-text">Este es tu listado de proyectos</p>
                     </div>
             </div>
         </div>

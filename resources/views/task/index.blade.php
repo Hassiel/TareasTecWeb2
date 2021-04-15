@@ -78,7 +78,6 @@
                         <table class="table table-dark table-hover table-borderless">
                     <thead>
                         <tr>
-                        <th scope="col">#</th>
                         <th scope="col">Nombre</th>
                         <th scope="col">Descripción</th>
                         <th scope="col">Fecha de entrega</th>
@@ -90,8 +89,7 @@
                     <tbody>
                         @foreach ($tareas as $tarea)
                         <tr>
-                            <th scope="row">{{ $tarea->id }}</th>
-                            <td>{{ $tarea->name }}</td>
+                            <th scope="row">{{ $tarea->name }}</th>
                             <td>{{ $tarea->description }}</td>
                             <td>{{ $tarea->due_date }}</td>
                             <td>{{ $tarea->area }}</td>

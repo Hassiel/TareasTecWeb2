@@ -71,12 +71,12 @@ height: 100%;"  loop  autoplay></lottie-player>
       <div class="col-md-6 mt-lg-5">
         <h3 class="text-white mt-5 text-center" style="font-size: 5vw;">Para estudiantes</h3>
         <p class="text-white mt-5 text-center" style="font-size: 9vw;">0$</p>
-        <a class="btn cta bg mt-5">Conoce más¡ Si no quieres no</a>
+        <a href="{{ route('register') }}" class="btn cta bg mt-5">Únete hommie</a>
       </div>
       <div class="col-md-6 mt-lg-5">
         <h3 class="text-white mt-5 text-center" style="font-size: 5vw;">Para equipos</h3>
         <p class="text-white mt-5 text-center" style="font-size: 9vw;">10$</p>
-        <a class="btn cta bg mt-5 ">Conoce más¡ Si no quieres no</a>
+        <a href="{{ route('register') }}" class="btn cta bg mt-5 ">Tienes proyectos chidos?</a>
       </div>
     </div>
   </div>

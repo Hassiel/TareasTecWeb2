@@ -17,7 +17,6 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Cabin:wght@400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="{{ asset('css/app.css') }}">
     
 
     <!-- BOX ICONS CSS-->
@@ -121,12 +120,6 @@
         container.classList.toggle("active-cont");
       });
     </script>
-    <script src="{{ asset('js/locomotive-scroll.min.js') }}"></script>
-<script>
-    const scroll = new LocomotiveScroll({
-    el: document.querySelector('[data-scroll-container]'),
-    smooth: true
-});
 </script>
 </body>
 </html>
